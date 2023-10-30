@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flower Classification</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1 class="title">Flower Classification</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div class="file-upload">
+            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
+                Image</button>
+
+            <div class="image-upload-wrap">
+                <input class="file-upload-input" type='file' name="file" onchange="readURL(this);" accept="image/*" />
+                <div class="drag-text">
+                    <h3>Drag and drop a file or select add Image</h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" />
+                <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="remove-image">
+                        Remove
+                        <span class="image-title">Uploaded Image</span>
+                    </button>
+                </div>
+                <input type="submit" value="Classify" class="file-submit-btn">
+            </div>
+        </div>
+    </form>
+
+    <br>
+    {% if flower_prediction %}
+    <p>Predicted Flower: {{ flower_prediction }}</p>
+    {{ flower_path }}
+    <img src="data:image/jpeg;base64, {{ image_data }}" alt="Predicted Flower">
+    {% endif %}
+    <script src="../static/script.js"></script>
+</body>

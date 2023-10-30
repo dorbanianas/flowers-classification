@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flower Classification</title>
+    <link rel="stylesheet" type="text/css" href="../static/style-prediction.css">
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1 class="title">Flower Classification</h1>
+    <div class="prediction-container">
+        <button class="prediction-home" "><a href=" /" style="text-decoration:none; color: #fff;">Home</a></button>
+
+        {% if flower_prediction %}
+        <div class="image-container">
+            <img src="data:image/jpeg;base64, {{ image_data }}" alt="Predicted Flower">
+        </div>
+        <div class="prediction-results">
+            <p class="prediction-title">The uploaded flower is<p>
+            <p class="prediction">{{ flower_prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>

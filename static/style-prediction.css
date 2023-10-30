@@ -1,0 +1,73 @@
+body {
+    font-family: sans-serif;
+    background-color: #eeeeee;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(80, 80, 80);
+}
+
+.prediction-container {
+    background-color: #ffffff;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.prediction-home {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1FB264;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824B;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.prediction-home:hover {
+    background: #1AA059;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.prediction-home:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.prediction-results {
+    text-align: center;
+}
+
+.prediction {
+    width: 100%;
+    color: #fff;
+    background: #066e37;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #1FB264;
+    position: relative;
+}
+
